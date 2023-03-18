@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>クイズアプリ</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- online/ CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <body>
+        <div class="text-center ">
+        <!-- ↓クイズのタイトルをh2の中に書こう↓ -->
+        <h2>Q.この写真を撮った場所は？</h2>
+        <!-- ↓<img>タグを使って画像を表示しよう↓ -->
+        <img
+            src="https://stay-concierge.img-ikyu.com/concierge/wp-content/uploads/2016/06/607_02.jpg?w=700&auto=format"
+            class="rounded-2"/>
+        <div class="">
+            <button class="form-control mt-2 bg-info text-white w-50 mx-auto" id="choice-1">長野県／昼神温泉</button>
+            <button class="form-control mt-2 bg-info text-white w-50 mx-auto" id="choice-2">沖縄県／小浜島</button>
+            <button class="form-control mt-2 bg-info text-white w-50 mx-auto" id="choice-3">青森県／弘前</button>
+            <!-- それぞれid="choice-1",id="choice-2",id="choice-3"を持つ<button></button>タグを記述 -->
+        </div>
+        <!-- ↓id="feedback"を持つ<div></div>を記述↓ -->
+        <div class="form-control mx-auto border-primary border-2 rounded mt-5 w-25 bg-primary text-light"id="feedback" class="text-primary">答え</div>
+        </div>
+        <script>
+        const choice1 = document.getElementById("choice-1");
+        const choice2 = document.getElementById("choice-2");
+        const choice3 = document.getElementById("choice-3");
+        const feedback = document.getElementById("feedback");
+
+        choice1.onclick = function () {
+            feedback.textContent = "正解！";
+        };
+        choice2.onclick = function () {
+            feedback.textContent = "残念！";
+        };
+        choice3.onclick = function () {
+            feedback.textContent = "不正解！";
+        };
+        </script>
+    </body>
+    </html>
